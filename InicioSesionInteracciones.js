@@ -1,0 +1,2 @@
+import { Registro } from "./RegistroInteracciones";
+

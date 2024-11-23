@@ -20,23 +20,17 @@ class Registro{
 
     GuardarInformacion(){
         if(this.ComprobarCorreo){
-            let Datos = JSON.parse(localStorage.getItem("Datos")) || [];
+            let DatosContenedor = JSON.parse(localStorage.getItem("Datos")) || [];
             let Contenedor = [this.Correo, this.Nombre, this.Contraseña];
-            Datos.push(Contenedor)
+            DatosContenedor.push(Contenedor)
 
-            localStorage.setItem("Datos", JSON.stringify(Datos))
+            localStorage.setItem("Datos", JSON.stringify(DatosContenedor))
             let fullData = localStorage.getItem("Datos");
             console.log(fullData)
         }
         
     }
 }
-
-
-
-
-
-
 
 var Correo=document.getElementById("Correo");
 var Nombre=document.getElementById("Nombre");
@@ -120,7 +114,7 @@ Boton.addEventListener("click", () => {
             Correo.style.boxShadow=""
             Nombre.style.boxShadow=""
             Contraseña.style.boxShadow=""
-            
+            window.location.href="index.html"
         }
 
         

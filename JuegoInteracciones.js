@@ -18,41 +18,54 @@ class Juego{
 
     
     ComprobarPapel(random){
+        const resultadoDiv = document.getElementById("Respuesta");
         if(this.Papel==random){
-            alert("empate")
+            resultadoDiv.innerHTML = "Empate!";
+            resultadoDiv.style.color = "white";
         }
         else if(this.Papel=="Papel" && random=="Piedra"){
-            alert("Ganas")
+            resultadoDiv.innerHTML = "¡Ganas!";
+            resultadoDiv.style.color = "green";
         }
         else{
-            alert("Pierdes")
+            resultadoDiv.innerHTML = "¡Pierdes!";
+            resultadoDiv.style.color = "red";
         }
     }
 
     ComprobarPiedra(random){
+        const resultadoDiv = document.getElementById("Respuesta");
         if(this.Piedra==random){
-            alert("empate")
+            resultadoDiv.innerHTML = "Empate!";
+            resultadoDiv.style.color = "white";
         }
         else if(this.Piedra=="Piedra" && random=="Tijeras"){
-            alert("Ganas")
+            resultadoDiv.innerHTML = "¡Ganas!";
+            resultadoDiv.style.color = "green";
         }
         else{
-            alert("Pierdes")
+            resultadoDiv.innerHTML = "¡Pierdes!";
+            resultadoDiv.style.color = "red";
         }
     }
 
     
     ComprobarTijeras(random){
 
+
+        const resultadoDiv = document.getElementById("Respuesta");
         
         if(this.Tijeras==random){
-            alert("empate")
+            resultadoDiv.innerHTML = "Empate!";
+            resultadoDiv.style.color = "white";
         }
         else if(this.Tijeras=="Tijeras" && random=="Papel"){
-            alert("Ganas")
+            resultadoDiv.innerHTML = "¡Ganas!";
+            resultadoDiv.style.color = "green";
         }
         else{
-            alert("Pierdes")
+            resultadoDiv.innerHTML = "¡Pierdes!";
+            resultadoDiv.style.color = "red";
         }
     }
 
@@ -66,61 +79,85 @@ class Juego2 extends Juego{
         this.Lagarto=Lagarto
     }
     ComprobarPapel(random){
+        const resultadoDiv = document.getElementById("Respuesta2");
         if(this.Papel==random){
-            alert("empate")
+            resultadoDiv.innerHTML = "Empate!";
+            resultadoDiv.style.color = "white";
         }
         else if(this.Papel=="Papel" && random=="Piedra" || this.Papel=="Papel" && random=="Spock" ){
-            alert("Ganas")
+            resultadoDiv.innerHTML = "¡Ganas!";
+            resultadoDiv.style.color = "green";
         }
         else{
-            alert("Pierdes")    
+            resultadoDiv.innerHTML = "¡Pierdes!";
+            resultadoDiv.style.color = "red";    
         }
     }
     ComprobarPiedra(random){
+        const resultadoDiv = document.getElementById("Respuesta2");
+
         if(this.Piedra==random){
-            alert("empate")
+            resultadoDiv.innerHTML = "Empate!";
+            resultadoDiv.style.color = "white";
         }
         else if(this.Piedra=="Piedra" && random=="Tijeras" || this.Piedra=="Piedra" && random=="Lagarto"){
-            alert("Ganas")
+            resultadoDiv.innerHTML = "¡Ganas!";
+            resultadoDiv.style.color = "green";
         }
         else{
-            alert("Pierdes")
+            resultadoDiv.innerHTML = "¡Pierdes!";
+            resultadoDiv.style.color = "red"; 
         }
     }
 
     ComprobarTijeras(random){
+        const resultadoDiv = document.getElementById("Respuesta2");
+
         if(this.Tijeras==random){
-            alert("empate")
+            resultadoDiv.innerHTML = "Empate!";
+            resultadoDiv.style.color = "white";
         }
         else if(this.Tijeras=="Tijeras" && random=="Papel" || this.Tijeras=="Tijeras" && random=="Lagarto"){
-            alert("Ganas")
+            resultadoDiv.innerHTML = "¡Ganas!";
+            resultadoDiv.style.color = "green";
         }
         else{
-            alert("Pierdes")
+            resultadoDiv.innerHTML = "¡Pierdes!";
+            resultadoDiv.style.color = "red"; 
         }
 
     }
     ComprobarSpock(random){
+        const resultadoDiv = document.getElementById("Respuesta2");
+
         if(this.spock==random){
-            alert("empate")
+            resultadoDiv.innerHTML = "Empate!";
+            resultadoDiv.style.color = "white";
         }
         else if((this.spock=="Spock" && random=="Tijeras") || (this.spock=="Spock" && random=="Piedra")){
-            alert("Ganas")
+            resultadoDiv.innerHTML = "¡Ganas!";
+            resultadoDiv.style.color = "green";
         }
         else{
-            alert("Pierdes")
+            resultadoDiv.innerHTML = "¡Pierdes!";
+            resultadoDiv.style.color = "red"; 
         }
     }
 
     ComprobarLagarto(random){
+        const resultadoDiv = document.getElementById("Respuesta2");
+        
         if(this.Lagarto==random){
-            alert("empate")
+            resultadoDiv.innerHTML = "Empate!";
+            resultadoDiv.style.color = "white";
         }
         else if(this.Lagarto=="Lagarto" && random=="Papel " || this.Lagarto=="Lagarto" && random=="Spock"){
-            alert("Ganas")
+            resultadoDiv.innerHTML = "¡Ganas!";
+            resultadoDiv.style.color = "green";
         }
         else{
-            alert("Pierdes")
+            resultadoDiv.innerHTML = "¡Pierdes!";
+            resultadoDiv.style.color = "red"
         }
     }
 }
@@ -162,12 +199,18 @@ Piedra.addEventListener("click",()=>{
     
     if(random=="Piedra"){
         imagen.src ="Piedra.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Papel"){
-        imagen.src ="Papel.png"; 
+        imagen.src ="Papel.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px" 
     }
     else{
         imagen.src ="Tijeras.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
 })
 
@@ -192,12 +235,18 @@ Tijera.addEventListener("click",()=>{
 
     if(random=="Piedra"){
         imagen.src ="Piedra.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Papel"){
         imagen.src ="Papel.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else{
         imagen.src ="Tijeras.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     
 })
@@ -212,12 +261,18 @@ Papel.addEventListener("click",()=>{
     DivPadre.appendChild(imagen); 
     if(random=="Piedra"){
         imagen.src ="Piedra.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Papel"){
         imagen.src ="Papel.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else{
         imagen.src ="Tijeras.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
 });
 
@@ -230,7 +285,7 @@ Papel.addEventListener("click",()=>{
 PiedraToB.addEventListener("click",()=>{
 
     let random=getRandomElement(EleccionesToB);
-    JuegoToB.ComprobarPiedra(random);
+   
     const DivPadre = document.getElementById("ContenedorRamdomToB");
     DivPadre.innerHTML=""
     const imagen = document.createElement("img");
@@ -238,24 +293,39 @@ PiedraToB.addEventListener("click",()=>{
     
     if(random=="Piedra"){
         imagen.src ="Piedra.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Papel"){
         imagen.src ="Papel.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Tijeras"){
         imagen.src ="Tijeras.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Spock"){
         imagen.src ="Spock.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else{
         imagen.src ="Lagarto.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
+    JuegoToB.ComprobarPiedra(random);
 })
+
+
+
+
 
 PapelToB.addEventListener("click",()=>{
     let random=getRandomElement(EleccionesToB);
-    JuegoToB.ComprobarPapel(random);
+    
     const DivPadre = document.getElementById("ContenedorRamdomToB");
     DivPadre.innerHTML=""
     const imagen = document.createElement("img");
@@ -263,24 +333,34 @@ PapelToB.addEventListener("click",()=>{
     
     if(random=="Piedra"){
         imagen.src ="Piedra.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Papel"){
         imagen.src ="Papel.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Tijeras"){
         imagen.src ="Tijeras.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Spock"){
         imagen.src ="Spock.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else{
         imagen.src ="Lagarto.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
+    JuegoToB.ComprobarPapel(random);
 })
 
 TijeraToB.addEventListener("click",()=>{
     let random=getRandomElement(EleccionesToB);
-    JuegoToB.ComprobarTijeras(random);
     const DivPadre = document.getElementById("ContenedorRamdomToB");
     DivPadre.innerHTML=""
     const imagen = document.createElement("img");
@@ -288,24 +368,37 @@ TijeraToB.addEventListener("click",()=>{
     
     if(random=="Piedra"){
         imagen.src ="Piedra.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Papel"){
         imagen.src ="Papel.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Tijeras"){
         imagen.src ="Tijeras.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Spock"){
         imagen.src ="Spock.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else{
         imagen.src ="Lagarto.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
+    JuegoToB.ComprobarTijeras(random);
+
 })
+
+
 
 Lagarto.addEventListener("click",()=>{
     let random=getRandomElement(EleccionesToB);
-    JuegoToB.ComprobarLagarto(random);
     const DivPadre = document.getElementById("ContenedorRamdomToB");
     DivPadre.innerHTML=""
     const imagen = document.createElement("img");
@@ -313,44 +406,69 @@ Lagarto.addEventListener("click",()=>{
     
     if(random=="Piedra"){
         imagen.src ="Piedra.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Papel"){
         imagen.src ="Papel.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Tijeras"){
         imagen.src ="Tijeras.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Spock"){
         imagen.src ="Spock.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else{
         imagen.src ="Lagarto.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
+    JuegoToB.ComprobarLagarto(random);
+
 })
+
+
 
 Spock.addEventListener("click",()=>{
     let random=getRandomElement(EleccionesToB);
-    JuegoToB.ComprobarSpock(random);
     const DivPadre = document.getElementById("ContenedorRamdomToB");
     DivPadre.innerHTML=""
     const imagen = document.createElement("img");
     DivPadre.appendChild(imagen); 
     
     if(random=="Piedra"){
-        imagen.src ="Piedra.png"; 
+        imagen.src ="Piedra.png";  
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Papel"){
         imagen.src ="Papel.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Tijeras"){
         imagen.src ="Tijeras.png"; 
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else if(random=="Spock"){
         imagen.src ="Spock.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
     else{
         imagen.src ="Lagarto.png";
+        imagen.style.backgroundColor="rgb(211, 211, 211)"
+        imagen.style.borderRadius="30px 30px 30px 30px"
     }
+    JuegoToB.ComprobarSpock(random);
+
 })
 
 

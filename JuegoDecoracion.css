@@ -5,13 +5,13 @@ h4{
     text-align: center;
 }
 body{
-    background-color:bisque;
+    background-color:rgb(53, 53, 53);
 }
 #Clasica{
     position: relative;
     top: 20px;
     margin-bottom: 200px;
-    background-color: aqua;
+    background-color: rgb(175, 175, 175);
     margin-left: 20%;
     margin-right: 20%;
     border: 2px solid black;
@@ -25,7 +25,6 @@ body{
     padding-bottom: 10px;
 }
 #ContenedorUsuario{
-    border: 2px solid;
     display: flex;
     flex-direction: column;
     width: auto;
@@ -34,6 +33,9 @@ body{
 #ContenedorUsuario button{
     width: 100%;
     height: 150px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 30px 30px 30px 30px;
 }
 #ContenedorRamdomClasico{
     display: flex;
@@ -42,13 +44,15 @@ body{
     position: relative;
     top: 90px;
 }
-
+#Respuesta{
+    font-size: 140%;
+}
 
 
 /*---------------------------------------------------------------------------------------------*/
 #Nueva{
     margin-bottom: 200px;
-    background-color: aqua;
+    background-color: rgb(175, 175, 175);
     margin-left: 20%;
     margin-right: 20%;
     border: 2px solid black;
@@ -65,7 +69,6 @@ body{
     align-items: center;
 }
 #ContenedorUsuarioToB{
-    border: 2px solid;
     display: flex;
     flex-direction: column;
     width: auto;
@@ -75,8 +78,15 @@ body{
 #ContenedorUsuarioToB button{
     width: 100%;
     height: 160px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 30px 30px 30px 30px;
 }
 #ContenedorRespuestaToB{
     position: relative;
     top: 200px;
+}
+
+#Respuesta2{
+    font-size: 140%;
 }

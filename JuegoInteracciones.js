@@ -151,7 +151,7 @@ class Juego2 extends Juego{
             resultadoDiv.innerHTML = "Empate!";
             resultadoDiv.style.color = "white";
         }
-        else if(this.Lagarto=="Lagarto" && random=="Papel " || this.Lagarto=="Lagarto" && random=="Spock"){
+        else if(this.Lagarto=="Lagarto" && random=="Papel" || this.Lagarto=="Lagarto" && random=="Spock"){
             resultadoDiv.innerHTML = "¡Ganas!";
             resultadoDiv.style.color = "green";
         }

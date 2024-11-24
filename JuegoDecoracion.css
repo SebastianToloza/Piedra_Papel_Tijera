@@ -1,0 +1,82 @@
+h3{
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+body{
+    background-color:bisque;
+}
+#Clasica{
+    position: relative;
+    top: 20px;
+    margin-bottom: 200px;
+    background-color: aqua;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 2px solid black;
+    border-radius: 25px 25px 25px 25px;
+
+}
+#ContenedorElecciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+#ContenedorUsuario{
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+#ContenedorUsuario button{
+    width: 100%;
+    height: 150px;
+}
+#ContenedorRamdomClasico{
+    display: flex;
+    width: 15%;
+    height: 100px;
+    position: relative;
+    top: 90px;
+}
+
+
+
+/*---------------------------------------------------------------------------------------------*/
+#Nueva{
+    margin-bottom: 200px;
+    background-color: aqua;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 2px solid black;
+    border-radius: 25px 25px 25px 25px;
+
+}
+#ContenedorRamdomToB{
+    display: flex;
+    width: 250px;
+    height: 100px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ContenedorUsuarioToB{
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+
+}
+#ContenedorUsuarioToB button{
+    width: 100%;
+    height: 160px;
+}
+#ContenedorRespuestaToB{
+    position: relative;
+    top: 200px;
+}

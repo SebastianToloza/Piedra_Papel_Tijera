@@ -30,7 +30,7 @@ var Boton=document.getElementById("Enviar")
 Boton.addEventListener("click",()=>{
     const Inicio = new InicioSesion(Nombre.value,Contraseña.value)
     if(Inicio.ComprobarNombre() && Inicio.ComprobarContraseña() ){
-        alert("bien")
+        window.location.href="Juego.html"
     }
     else{
         alert("mal")

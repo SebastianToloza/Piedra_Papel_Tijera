@@ -3,16 +3,16 @@ class InicioSesion{
     constructor(Nombre,Contraseña){
         this.Nombre=Nombre
         this.Contraseña=Contraseña
-    }   
+    }
     ComprobarContraseña(){
         let Datos = JSON.parse(localStorage.getItem("Datos")) || [];
         return Datos.some((valor) => valor[1] == this.Nombre && valor[2] == this.Contraseña);
-        
+
     }
     ComprobarNombre(){
-        let Datos = JSON.parse(localStorage.getItem("Datos")) || [];    
+        let Datos = JSON.parse(localStorage.getItem("Datos")) || [];
         return Datos.some((valor) => valor[1] == this.Nombre);
-        
+
     }
 }
 
@@ -33,6 +33,6 @@ Boton.addEventListener("click",()=>{
         window.location.href="Juego.html"
     }
     else{
-        alert("mal")
+        alert("Los Datos digitados son incorrctos")
     }
 })
